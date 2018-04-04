@@ -36,6 +36,8 @@ public class VetServlet extends HttpServlet {
         String sname=request.getParameter("sname");
         try
         {
+//          VetDAO vetDAO = new VetDAO();
+//          List<Vet> vets= vetDAO.search(vname, sname);
             List<Vet> vets=new VetDAO().search(vname, sname);
             if(0==vets.size())
             {

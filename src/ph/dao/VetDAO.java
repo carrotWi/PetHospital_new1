@@ -8,7 +8,7 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
-//import ph.po.Speciality;
+import ph.po.Speciality;
 import ph.po.Vet;
 
 public class VetDAO
@@ -61,10 +61,10 @@ public class VetDAO
                 rs = ps.executeQuery();
                 while (rs.next())
                 {
-//                    Speciality s = new Speciality();// 这里查找的是t_speciality.* 所以使用Speciality封装
-//                    s.setId(rs.getInt("id"));
-//                    s.setName(rs.getString("name"));
-//                    v.getSpecs().add(s);
+                    Speciality s = new Speciality();// 这里查找的是t_speciality.* 所以使用Speciality封装
+                    s.setId(rs.getInt("id"));
+                    s.setName(rs.getString("name"));
+                    v.getSpecs().add(s);
                 }
             }
 
